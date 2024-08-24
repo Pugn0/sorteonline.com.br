@@ -21,7 +21,7 @@ def api(usuario, senha, headers):
                 erro = obj['message']
                 retorno = f'{credenciais} - {erro}'
                 print(retorno)
-            elif response.status_code == 200:
+            elif response.status_code == 201:
                 retorno = f'{credenciais} - {response.text}'
                 print(retorno)
                 with open("live-login.txt", "a+") as arquivo:
